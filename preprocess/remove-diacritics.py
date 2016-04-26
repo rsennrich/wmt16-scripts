@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Author: Barry Haddow
+# Distributed under MIT license
 
 #
 # Remove Romanian diacritics. Assumes s-comma and t-comma are normalised
-#
-# author: Barry Haddow
 
 import io
 import sys

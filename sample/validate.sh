@@ -16,7 +16,7 @@ dev=data/newsdev2016.bpe.ro
 ref=data/newsdev2016.tok.en
 
 # decode
-THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=$device,on_unused_input=warn python $nematus/nmt/translate.py \
+THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=$device,on_unused_input=warn python $nematus/nematus/translate.py \
      -m $prefix.dev.npz \
      -i $dev \
      -o $dev.output.dev \

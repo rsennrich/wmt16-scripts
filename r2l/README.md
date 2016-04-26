@@ -12,11 +12,11 @@ use the same vocabulary, and apply reverse.py *after* truecasing/BPE, to simplif
 
 3. at test time, produce an n-best list with the l2r model(s):
 
-  time THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=gpu,on_unused_input=warn python /path/to/nematus/nmt/translate.py -m model.npz -i test.bpe.de -o test.output.50best -k 50 -n -p 1 --n-best
+  time THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=gpu,on_unused_input=warn python /path/to/nematus/nematus/translate.py -m model.npz -i test.bpe.de -o test.output.50best -k 50 -n -p 1 --n-best
 
 4. reverse the outputs in the n-best list, and re-score with the r2l model(s).
 
   python reverse_nbest.py < test.output.50best > test.output.50best.reversed
 
-  time THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=gpu,on_unused_input=warn python /path/to/nematus/nmt/rescore.py -m /path/to/r2l_model/model.npz -s test.bpe.de -i test.output.50best.reversed -o test.output.50best.rescored -b 80 -n
+  time THEANO_FLAGS=mode=FAST_RUN,floatX=float32,device=gpu,on_unused_input=warn python /path/to/nematus/nematus/rescore.py -m /path/to/r2l_model/model.npz -s test.bpe.de -i test.output.50best.reversed -o test.output.50best.rescored -b 80 -n
   python rerank.py < test.output.50best.rescored | python reverse.py > test.output.reranked

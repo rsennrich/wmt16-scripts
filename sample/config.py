@@ -2,9 +2,7 @@ import numpy
 import os
 import sys
 
-sys.path.append('/path/to/nematus/nmt')
-
-from nmt import train
+sys.path.append('/path/to/nematus/nematus')
 
 VOCAB_SIZE = 90000
 SRC = "ro"

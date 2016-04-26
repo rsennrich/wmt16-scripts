@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Author: Barry Haddow
+# Distributed under MIT license
 
 #
 # Normalise Romanian s-comma and t-comma
-#
-# author: Barry Haddow
 
 import io
 import sys

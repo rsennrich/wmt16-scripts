@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+# Author: Rico Sennrich
+# Distributed under MIT license
 
 import sys
 
