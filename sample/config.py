@@ -2,14 +2,12 @@ import numpy
 import os
 import sys
 
-sys.path.append('/path/to/nematus/nematus')
-
 VOCAB_SIZE = 90000
 SRC = "ro"
 TGT = "en"
 DATA_DIR = "data/"
 
-from nmt import train
+from nematus.nmt import train
 
 
 if __name__ == '__main__':
