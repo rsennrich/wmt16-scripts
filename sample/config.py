@@ -37,5 +37,5 @@ if __name__ == '__main__':
                     dropout_source=0.1, # dropout source words (0: no dropout)
                     dropout_target=0.1, # dropout target words (0: no dropout)
                     overwrite=False,
-                    external_validation_script='validate.sh')
+                    external_validation_script='./validate.sh')
     print validerr
