@@ -1,0 +1,4 @@
+*.tok.*
+*.tc.*
+*.bpe.*
+*.factors.*
