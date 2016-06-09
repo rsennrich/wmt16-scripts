@@ -12,8 +12,16 @@ OVERVIEW
 
 - We built translation models with Nematus ( https://www.github.com/rsennrich/nematus )
 - We used BPE as subword segmentation to achieve open-vocabulary translation ( https://github.com/rsennrich/subword-nmt )
-- We automatically back-translated in-domain monolingual data into the source language to create additional training data. The data is publicly available here: http://statmt.org/rsennrich/wmt16_backtranslations/
-- More details about our system will appear in the (upcoming) system description paper
+- We automatically back-translated in-domain monolingual data into the source language to create additional training data.
+- More details about our system are available in the system description paper (see below for reference)
+
+MODELS and DATA
+---------------
+
+- pre-trained models on WMT data are released at http://statmt.org/rsennrich/wmt16_systems/
+  they currently correspond to the best single model for 8 translation directions: EN<->{CS,DE,RO,RU}
+
+- automatically back-translated monolingual data, which we used for our WMT submissions, is available at http://statmt.org/rsennrich/wmt16_backtranslations/
 
 SCRIPTS
 -------
