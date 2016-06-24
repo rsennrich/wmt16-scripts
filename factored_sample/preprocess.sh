@@ -62,7 +62,7 @@ for prefix in newstest2013
  done
 
 # train BPE
-cat data/$prefix.tc.$SRC data/$prefix.tc.$TRG | $subword_nmt/learn_bpe.py -s $bpe_operations > model/$SRC$TRG.bpe
+cat data/corpus.tc.$SRC data/corpus.tc.$TRG | $subword_nmt/learn_bpe.py -s $bpe_operations > model/$SRC$TRG.bpe
 
 # apply BPE
 
