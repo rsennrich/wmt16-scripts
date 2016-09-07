@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# theano device
+# theano device, in case you do not want to compute on gpu, change it to cpu
 device=gpu
 
 # path to nematus ( https://www.github.com/rsennrich/nematus )

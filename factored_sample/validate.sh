@@ -6,7 +6,7 @@ nematus=/path/to/nematus
 # path to moses decoder: https://github.com/moses-smt/mosesdecoder
 mosesdecoder=/path/to/mosesdecoder
 
-# theano device
+# theano device, in case you do not want to compute on gpu, change it to cpu
 device=gpu
 
 #model prefix
