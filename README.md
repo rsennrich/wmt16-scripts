@@ -2,7 +2,8 @@ Scripts for Edinburgh Neural MT systems for WMT 16
 ==================================================
 
 This repository contains scripts and an example config used for the Edinburgh Neural MT submission (UEDIN-NMT)
-for the shared translation task at the 2016 Workshops on Statistical Machine Translation (http://www.statmt.org/wmt16/).
+for the shared translation task at the 2016 Workshops on Statistical Machine Translation (http://www.statmt.org/wmt16/),
+and for the paper "Linguistic Input Features Improve Neural Machine Translation".
 
 The scripts will facilitate the reproduction of our results, and serve as additional documentation (along with the system description paper)
 
@@ -22,6 +23,8 @@ MODELS and DATA
   they currently correspond to the best single model for 8 translation directions: EN<->{CS,DE,RO,RU}
 
 - automatically back-translated monolingual data, which we used for our WMT submissions, is available at http://statmt.org/rsennrich/wmt16_backtranslations/
+
+- linguistically annotated corpora which we used for our factored models are available at http://data.statmt.org/rsennrich/wmt16_factors/
 
 SCRIPTS
 -------

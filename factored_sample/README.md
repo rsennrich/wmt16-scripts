@@ -16,6 +16,9 @@ As a first step, preprocess the training data:
 
   ./preprocess.sh
 
+It is assumed that you have the source text in the CONLL format, with a plain text target side.
+The preprocessed files we used for our WMT 2016 experiments can be found here: http://data.statmt.org/rsennrich/wmt16_factors/ (note: since the target side is already tokenized, you can delete the tokenization section in `preprocess.sh` if you use these files)
+
 Then, start training: on normal-size data sets, this will take about 1-2 weeks to converge.
 Models are saved regularly, and you may want to interrupt this process without waiting for it to finish.
 
