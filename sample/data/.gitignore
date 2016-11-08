@@ -1,3 +1,5 @@
 *.tok.*
 *.tc.*
 *.bpe.*
+*.tgz
+*.zip
