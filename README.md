@@ -48,7 +48,7 @@ WMT reports case-sensitive BLEU on detokenized text with the NIST BLEU scorer.
 Assuming that you have detokenized your output (see `sample/postprocess-test.sh`) in the file `output.detok`, here is how we score a system (on the example of EN-DE):
 
 ```
-  /path/tom/mosesdecoder/scripts/ems/support/wrap-xml.perl de newstest2016-ende-src.en.sgm output.detok > tmpfile
+  /path/tom/mosesdecoder/scripts/ems/support/wrap-xml.perl de newstest2016-ende-src.en.sgm < output.detok > tmpfile
   /path/tom/mosesdecoder/scripts/generic/mteval-v13a.pl -c -s newstest2016-ende-src.en.sgm -r newstest2016-ende-ref.de.sgm -t tmpfile
 ```
 
