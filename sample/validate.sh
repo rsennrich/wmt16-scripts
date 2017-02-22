@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # path to nematus ( https://www.github.com/rsennrich/nematus )
-nematus=/path/to/nematus
+nematus=/home/hieu/workspace/github/nematus
 
 # path to moses decoder: https://github.com/moses-smt/mosesdecoder
-mosesdecoder=/path/to/mosesdecoder
+mosesdecoder=/home/hieu/workspace/github/mosesdecoder
 
 # theano device, in case you do not want to compute on gpu, change it to cpu
 device=gpu
