@@ -1,6 +1,7 @@
 import numpy
 import os
 import sys
+import logging
 
 VOCAB_SIZE = 90000
 SRC = "ro"
@@ -9,6 +10,7 @@ DATA_DIR = "data/"
 
 from nematus.nmt import train
 
+logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
 if __name__ == '__main__':
     validerr = train(saveto='model/model.npz',
