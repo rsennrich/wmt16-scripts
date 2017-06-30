@@ -48,7 +48,7 @@ WMT reports case-sensitive BLEU on detokenized text with the NIST BLEU scorer.
 Assuming that you have detokenized your output (see `sample/postprocess-test.sh`) in the file `output.detok`, here is how we score a system (on the example of EN-DE):
 
 ```
-  /path/to/mosesdecoder/scripts/ems/support/wrap-xml.perl de newstest2016-ende-src.en.sgm output.detok > tmpfile
+  /path/to/mosesdecoder/scripts/ems/support/wrap-xml.perl de newstest2016-ende-src.en.sgm < output.detok > tmpfile
   /path/to/mosesdecoder/scripts/generic/mteval-v13a.pl -c -s newstest2016-ende-src.en.sgm -r newstest2016-ende-ref.de.sgm -t tmpfile
 ```
 
@@ -59,7 +59,7 @@ alternatively, you can use `multi-bleu-detok.perl`, which accepts detokenized ou
   /path/to/nematus/data/multi-bleu-detok.perl newstest2016-ende-ref.de.txt < output.detok
 ```
 
-Note that `multi-bleu.perl` on tokenized text will give different scores (usually higher), because of tokenization differences.
+Note that `multi-bleu.perl` (or `multi-bleu-detok.perl`) on tokenized text will give different scores (usually higher), because of tokenization differences.
 Also, comparing different systems with tokenized BLEU is unreliable unless tokenization is identical.
 Even when using standard Moses tokenization, command line options like '-penn' and '-a' will cause inconsistencies.
 
