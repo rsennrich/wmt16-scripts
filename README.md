@@ -7,6 +7,7 @@ and for the paper "Linguistic Input Features Improve Neural Machine Translation"
 
 The scripts will facilitate the reproduction of our results, and serve as additional documentation (along with the system description paper)
 
+NOTE: for newer instructions (from WMT 17), see http://data.statmt.org/wmt17_systems/training/
 
 OVERVIEW
 --------
