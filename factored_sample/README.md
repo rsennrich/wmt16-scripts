@@ -32,3 +32,28 @@ Finally, you may want to post-process the translation output, namely merge BPE s
 detruecase and detokenize:
 
   ./postprocess-test.sh < data/newstest2013.output > data/newstest2013.postprocessed
+
+
+INSTRUCTIONS FOR LINGUISTIC ANNOTATION
+--------------------------------------
+
+If you want to work with raw text, here are the commands we used for creating the CONLL-formatted text.
+All commands were run after tokenization (with the Moses tokenizer), and after running the Moses script `scripts/tokenizer/deescape-special-chars.perl` to undo the escaping of special characters:
+
+For English:
+
+Download Stanford CoreNLP, then run:
+
+  preprocess/stanford-conll-wrapper.py --corenlp /path/to/stanford-corenlp-3.5.0.jar --corenlp-models /path/to/stanford-corenlp-3.5.0-models.jar < input_file > output_file
+
+3.5.0 is the version used in the published experiments. Newer versions of CoreNLP also support CoNLL output directly, although the number of columns is smaller, and conll_to_factors.py needs to be adjusted:
+
+  java -cp /path/to/stanford-corenlp-3.9.1.jar:/path/to/stanford-corenlp-3.9.1-models.jar edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators "tokenize, ssplit, pos, depparse, lemma" -ssplit.eolonly true -tokenize.whitespace true -outputFormat conll < input_file > output_file 2> /dev/null
+
+For German:
+
+Download ParZu and execute `install.sh`: https://github.com/rsennrich/ParZu
+
+to parse tokenized, one-line-per-sentence German text, run:
+
+  ParZu/parzu --input tokenized_lines -p 8 < input_file > output_file
