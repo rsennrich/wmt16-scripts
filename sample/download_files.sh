@@ -16,7 +16,7 @@ cd data/
 tar -xf ro-en.tgz
 unzip SETIMES2.ro-en.txt.zip
 
-cat europarl-v7.ro-en.en SETIMES2.en-ro.en > corpus.en
-cat europarl-v7.ro-en.ro SETIMES2.en-ro.ro > corpus.ro
+cat europarl-v7.ro-en.en SETIMES.en-ro.en > corpus.en
+cat europarl-v7.ro-en.ro SETIMES.en-ro.ro > corpus.ro
 
 cd ..
