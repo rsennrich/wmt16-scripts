@@ -17,6 +17,12 @@ Word = namedtuple(
 
 
 def escape_special_chars(line):
+    """
+    Escape special special characters.
+
+    Args:
+        line: (str): write your description
+    """
     line = line.replace('\'', '&apos;')  # xml
     line = line.replace('"', '&quot;')  # xml
     line = line.replace('[', '&#91;')  # syntax non-terminal
@@ -26,6 +32,12 @@ def escape_special_chars(line):
     return line
 
 def read_sentences(fobj):
+    """
+    Read sentences from a file - like object.
+
+    Args:
+        fobj: (todo): write your description
+    """
     sentence = []
 
     for line in fobj:
@@ -77,6 +89,13 @@ def read_sentences(fobj):
 
 
 def get_factors(sentence, idx):
+    """
+    Get factors for given sentence.
+
+    Args:
+        sentence: (str): write your description
+        idx: (int): write your description
+    """
 
     word = sentence[idx]
 

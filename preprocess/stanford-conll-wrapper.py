@@ -20,6 +20,11 @@ from collections import defaultdict
 from subprocess import Popen, PIPE
 
 def parse_args():
+    """
+    Parse command line arguments.
+
+    Args:
+    """
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--java', type=str, help = "path to JAVA runtime binary", default = 'java')
@@ -29,6 +34,15 @@ def parse_args():
     return parser.parse_args()
 
 def process_stanford(infile, java, corenlp, corenlp_models):
+    """
+    Process a list of stderr file.
+
+    Args:
+        infile: (str): write your description
+        java: (todo): write your description
+        corenlp: (todo): write your description
+        corenlp_models: (str): write your description
+    """
 
     stanford = Popen([java,
                '-cp', corenlp + ':' + corenlp_models,
@@ -43,6 +57,12 @@ def process_stanford(infile, java, corenlp, corenlp_models):
 
 
 def get_sentences(instream):
+    """
+    Get sentence sentences from the given stream.
+
+    Args:
+        instream: (str): write your description
+    """
     sentence = []
     expect = 0
 
@@ -94,6 +114,12 @@ def get_sentences(instream):
         yield sentence
 
 def write(sentence):
+    """
+    Write sentence to stdout.
+
+    Args:
+        sentence: (str): write your description
+    """
     for i, w in enumerate(sentence):
       sys.stdout.write('{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\n'.format(i+1, w['word'], w['lemma'], w['pos'], w['pos'], '-', w['head'], w['label']))
 
